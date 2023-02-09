@@ -24,7 +24,7 @@ class Taskupdateview(UpdateView):
     context_object_name = 'task'
     fields = ('name', 'priority', 'date')
     def get_success_url(self):
-        return reverse_lazy('edvdetail', kwargs={'pk': self.object.id})
+        return reverse_lazy('cbvdetail', kwargs={'pk': self.object.id})
 
 class Taskdeleteview(DeleteView):
     model= Task
